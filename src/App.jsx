@@ -102,6 +102,14 @@ function App() {
             <div className="column">
               <h2>{t.planning.title}</h2>
               <p>{t.planning.description}</p>
+              <ol>
+                <li>{t.planningFutureNiches[1]}</li>
+                <li>{t.planningFutureNiches[2]}</li>
+                <li>{t.planningFutureNiches[3]}</li>
+                <li>{t.planningFutureNiches[4]}</li>
+                <li>{t.planningFutureNiches[5]}</li>
+              </ol>
+              <p>{t.planning.afterList}</p>
             </div>
             <div className="column">
               <h2>{t.device.title}</h2>

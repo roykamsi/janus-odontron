@@ -20,8 +20,17 @@ export const translations = {
     },
     planning: {
       title: 'Pianificazione Futura',
-      description: 'Janus-Odontron farà parte dell\'industria delle macchine per radioterapia come la prima macchina capace di due fasci a gantry. Attualmente questa industria opera con la terapia protonica a fascio (PBT) ed è composta da molte altre nicchie specializzate in cinque tipi principali: tipo, tipo di prodotto, applicazione, utente finale e regione. In base alla regione, il mercato della radioterapia è segmentato in Americhe, Europa, Asia-Pacifico e Medio Oriente e Africa.'
+      description: 'Janus-Odontron farà parte dell\'industria delle macchine per radioterapia come la prima macchina capace di due fasci a gantry. Attualmente questa industria opera con la terapia protonica a fascio (PBT) ed è composta da molte altre nicchie specializzate in cinque tipi principali:',
+      afterList: 'In base alla regione, il mercato della radioterapia è segmentato in Americhe, Europa, Asia-Pacifico e Medio Oriente e Africa.'
     },
+    planningFutureNiches: {
+      1: 'Tipo',
+      2: 'Tipo di prodotto',
+      3: 'Applicazione',
+      4: 'Utente finale',
+      5: 'Regione',
+    },
+
     device: {
       title: 'Non Solo Un Dispositivo Diagnostico',
       description: 'Una guida d\'onda è situata all\'interno di ciascun gantry. All\'interno dell\'unità meccanica ci sono anche circuiti di back-off nanotecnologici per la trasformazione di movimenti ottici controllati digitalmente e giroscopi, progettati per stabilizzare i movimenti rotazionali.'
@@ -110,7 +119,15 @@ export const translations = {
     },
     planning: {
       title: 'Future Planning',
-      description: 'Janus-Odontron will be part of the radiotherapy machines industry as the first machine is capable of two gantry shot beams. Currently this industry operates with the Proton beam therapy (PBT) and is composed of many other niches specialized in five main types: type, product type, application, end user, and region. Based on the region, the radiotherapy market is segmented into the Americas, Europe, Asia-Pacific, and the Middle East & Africa.'
+      description: 'Janus-Odontron will be part of the radiotherapy machines industry as the first machine is capable of two gantry shot beams. Currently this industry operates with the Proton beam therapy (PBT) and is composed of many other niches specialized in five main types:',
+      afterList: 'Based on the region, the radiotherapy market is segmented into the Americas, Europe, Asia-Pacific, and the Middle East & Africa.'
+    },
+    planningFutureNiches: {
+      1: 'Type',
+      2: 'Product type',
+      3: 'Application',
+      4: 'End user',
+      5: 'Region',
     },
     device: {
       title: 'Not Only A Diagnostic Device',
