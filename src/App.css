@@ -1,0 +1,592 @@
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  padding: 20px 0;
+  background: var(--light-bg);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header nav {
+  text-align: right;
+}
+
+.nav-link {
+  color: var(--primary-teal);
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #2a3f5f 100%);
+  color: var(--text-light);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 80px 20px;
+  background: var(--light-bg);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.benefit-item img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.benefit-item p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Prototype Section */
+.prototype {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.prototype h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.prototype h2 {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.prototype .description {
+  max-width: 800px;
+  margin: 40px auto 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Future Planning Section */
+.future-planning {
+  padding: 80px 20px;
+  background: var(--light-bg);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.column h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.column p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Hadrontherapy Section */
+.hadrontherapy-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #4a6fa5 0%, var(--dark-bg) 100%);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.hadrontherapy-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hadrontherapy-section h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hadrontherapy-section .credit {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 20px;
+}
+
+/* Visual Map Section */
+.visual-map {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.visual-map h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.visual-map h2 {
+  font-size: 1.4rem;
+  color: var(--primary-teal);
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.map-diagram {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.map-diagram img {
+  width: 100%;
+  height: auto;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.map-item h3 {
+  color: var(--primary-teal);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.map-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.footnote {
+  margin-top: 50px;
+  font-size: 0.95rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Therapy Robot Section */
+.therapy-robot {
+  padding: 80px 20px;
+  background: var(--light-bg);
+}
+
+.therapy-robot h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.therapy-robot h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.robot-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.robot-image img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.robot-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Quantic Computer Section */
+.quantic-computer {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.quantic-computer h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.quantic-computer h2 {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.computer-image {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.computer-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.quantic-computer .description {
+  max-width: 700px;
+  margin: 30px auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Metamaterials Section */
+.metamaterials {
+  padding: 80px 20px;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.metamaterials h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.metamaterials h2 {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.metamaterials-image {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.metamaterials-image img {
+  width: 100%;
+  height: auto;
+}
+
+.metamaterials p {
+  max-width: 800px;
+  margin: 30px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Industry Applications */
+.industry-applications {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.industry-applications h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.industry-applications h2 {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.applications-image {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.applications-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, #00a68a 100%);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.cta-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta-section h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.or {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary-teal);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #00a68a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary-teal);
+}
+
+.btn-secondary:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn-primary {
+  background: white;
+  color: var(--primary-teal);
+}
+
+.cta-section .btn-primary:hover {
+  background: #f0f0f0;
+}
+
+.cta-section .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-section .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Notice Section */
+.notice {
+  padding: 60px 20px;
+  background: #fff8e1;
+  border-left: 5px solid #ffc107;
+}
+
+.notice h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.notice p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  background: var(--dark-bg);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--primary-teal);
+  transition: opacity 0.3s;
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+
+  .prototype h1,
+  .therapy-robot h1,
+  .quantic-computer h1,
+  .metamaterials h1,
+  .industry-applications h1 {
+    font-size: 1.8rem;
+  }
+
+  .visual-map h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section h1 {
+    font-size: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .robot-content {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .or {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .benefit-item img {
+    width: 120px;
+  }
+}
