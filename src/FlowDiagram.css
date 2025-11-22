@@ -1,0 +1,187 @@
+.flow-diagram {
+  max-width: 1300px;
+  margin: 50px auto;
+  padding: 40px 20px;
+}
+
+.flow-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.flow-node {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 380px;
+}
+
+.flow-node:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.flow-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: var(--primary-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 191, 165, 0.3);
+}
+
+.flow-icon svg {
+  width: 45px;
+  height: 45px;
+}
+
+.flow-node h3 {
+  font-size: 1.2rem;
+  color: var(--primary-teal);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.flow-node p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.flow-connector {
+  color: var(--primary-teal);
+  opacity: 0.6;
+}
+
+.flow-connector.horizontal {
+  width: 60px;
+  height: 20px;
+}
+
+.flow-connector.horizontal-flipped {
+  width: 60px;
+  height: 20px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.flow-connector-vertical-set {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 450px;
+  height: 60px;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+.flow-connector.vertical {
+  width: 20px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.flow-connector.vertical.left {
+  margin-left: auto;
+  margin-right: 25%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1) rotate(180deg);
+}
+
+.flow-connector.vertical.right {
+  margin-right: auto;
+  margin-left: 25%;
+}
+
+/* Specific node colors */
+.flow-node.printer .flow-icon {
+  background: linear-gradient(135deg, #00bfa5 0%, #00a68a 100%);
+}
+
+.flow-node.rmn .flow-icon {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+}
+
+.flow-node.workstation .flow-icon {
+  background: linear-gradient(135deg, #00bfa5 0%, #00a68a 100%);
+}
+
+.flow-node.ar .flow-icon {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flow-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .flow-connector.horizontal {
+    display: none;
+  }
+
+  .flow-connector.horizontal-flipped {
+    display: none;
+  }
+
+  .flow-connector-vertical-set {
+    display: none;
+  }
+
+  .flow-node {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .flow-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .flow-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flow-diagram {
+    padding: 20px 10px;
+  }
+
+  .flow-node {
+    padding: 25px 15px;
+  }
+
+  .flow-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .flow-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .flow-node h3 {
+    font-size: 1.1rem;
+  }
+
+  .flow-node p {
+    font-size: 0.9rem;
+  }
+}

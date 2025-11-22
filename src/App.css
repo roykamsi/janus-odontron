@@ -8,6 +8,11 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+.container-xl {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /* Header */
 .header {
@@ -83,27 +88,40 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--dark-bg) 0%, #2a3f5f 100%);
+  background: linear-gradient(135deg, rgba(26, 35, 50, 0.85) 0%, rgba(42, 63, 95, 0.85) 100%),
+              url('/images/Janus-Web-scaled.jpg') center center / cover no-repeat;
   color: var(--text-light);
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 300;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  opacity: 0.9;
+  opacity: 0.95;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Benefits Section */
 .benefits {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background: var(--light-bg);
 }
 
@@ -120,8 +138,8 @@
 }
 
 .benefit-item img {
-  width: 150px;
-  height: auto;
+  width: auto;
+  height: 80px;
   margin: 0 auto 20px;
 }
 
@@ -213,7 +231,7 @@
 
 .hadrontherapy-section h1 {
   font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .hadrontherapy-section h2 {
@@ -222,10 +240,24 @@
   margin-bottom: 20px;
 }
 
+.hadrontherapy-image {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hadrontherapy-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hadrontherapy-section .credit {
   font-size: 0.9rem;
   opacity: 0.7;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* Visual Map Section */
@@ -387,7 +419,7 @@
 }
 
 .metamaterials-image {
-  max-width: 1000px;
+  max-width: 100%;
   margin: 40px auto;
 }
 
@@ -425,7 +457,8 @@
 }
 
 .applications-image {
-  max-width: 1000px;
+  max-width: 100%;
+  padding: 40px 80px;
   margin: 40px auto;
 }
 
@@ -538,6 +571,22 @@
   color: #555;
   max-width: 900px;
 }
+
+/* Decorative Dividers */
+.section-divider {
+    width: 100vw;
+    height: 21vh;
+    background: url(/images/Linea-Stretta-02.png) center center / contain no-repeat;
+    margin: 40px -10px;
+    opacity: 0.8;
+}
+
+/* .section-divider.wave {
+  height: 350px;
+  width: 40%;
+  background: url('/images/Sfondo-Sinusoidale.png') center center / cover no-repeat;
+  margin: 0 auto;
+} */
 
 /* Footer */
 .footer {
@@ -667,7 +716,4 @@
     width: 100%;
   }
 
-  .benefit-item img {
-    width: 120px;
-  }
 }

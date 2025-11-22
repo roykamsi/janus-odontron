@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLanguage } from './LanguageContext.jsx'
+import FlowDiagram from './FlowDiagram.jsx'
 import './App.css'
 
 function App() {
@@ -66,6 +67,8 @@ function App() {
         </div>
       </section>
 
+      <div className="section-divider"></div>
+
       {/* Prototype Section */}
       <section className="prototype">
         <div className="container">
@@ -110,6 +113,11 @@ function App() {
         <div className="container">
           <h2>{t.hadrontherapy.title}</h2>
           <h1>{t.hadrontherapy.subtitle}</h1>
+
+          <div className="hadrontherapy-image">
+            <video autoPlay={true} src="/videos/The-NHS-Proton-Beam-Therapy-Programme_Gelatina-1.mp4" alt="Janus Odontron Device" />
+          </div>
+
           <p className="credit">{t.hadrontherapy.credit}</p>
         </div>
       </section>
@@ -120,28 +128,7 @@ function App() {
           <h1>{t.visualMap.title}</h1>
           <h2><em>{t.visualMap.subtitle}</em></h2>
 
-          <div className="map-diagram">
-            <img src="/images/Mappa-Janus.png" alt="Therapy Map" />
-          </div>
-
-          <div className="map-grid">
-            <div className="map-item">
-              <h3>{t.visualMap.printer.title}</h3>
-              <p>{t.visualMap.printer.description}</p>
-            </div>
-            <div className="map-item">
-              <h3>{t.visualMap.rmn.title}</h3>
-              <p>{t.visualMap.rmn.description}</p>
-            </div>
-            <div className="map-item">
-              <h3>{t.visualMap.workstation.title}</h3>
-              <p dangerouslySetInnerHTML={{ __html: t.visualMap.workstation.description }} />
-            </div>
-            <div className="map-item">
-              <h3>{t.visualMap.ar.title}</h3>
-              <p>{t.visualMap.ar.description}</p>
-            </div>
-          </div>
+          <FlowDiagram t={t} />
 
           <p className="footnote">{t.visualMap.footnote}</p>
         </div>
@@ -159,7 +146,7 @@ function App() {
             </div>
             <div className="robot-text">
               <p>{t.robot.description}</p>
-              <button className="btn-primary">{t.robot.button}</button>
+              {/* <button className="btn-primary">{t.robot.button}</button> */}
             </div>
           </div>
         </div>
@@ -177,7 +164,7 @@ function App() {
 
           <p className="description">{t.quantum.description}</p>
 
-          <button className="btn-primary">{t.quantum.button}</button>
+          {/* <button className="btn-primary">{t.quantum.button}</button> */}
         </div>
       </section>
 
@@ -188,7 +175,7 @@ function App() {
           <h2>{t.metamaterials.subtitle}</h2>
 
           <div className="metamaterials-image">
-            <img src="/images/Metamateriali.png" alt={t.metamaterials.title} />
+            <img src="/images/Metamateriali-BIANCO.gif" alt={t.metamaterials.title} />
           </div>
 
           <p>{t.metamaterials.description}</p>
@@ -197,7 +184,7 @@ function App() {
 
       {/* Industry Applications Section */}
       <section className="industry-applications">
-        <div className="container">
+        <div className="container-xl">
           <h1>{t.industry.title}</h1>
           <h2>{t.industry.subtitle}</h2>
 
@@ -207,18 +194,20 @@ function App() {
         </div>
       </section>
 
+      <div className="section-divider"></div>
+
       {/* Call to Action Section */}
       <section className="cta-section">
         <div className="container">
           <h1>{t.cta.title}</h1>
-          <h2>{t.cta.subtitle}</h2>
+          <p>{t.cta.subtitle}</p>
 
           <div className="cta-buttons">
             <a href="mailto:info@janus-odontron.com" className="btn-primary">
               {t.cta.contact}
             </a>
-            <span className="or">{t.cta.or}</span>
-            <button className="btn-secondary">{t.cta.odontron}</button>
+            {/* <span className="or">{t.cta.or}</span> */}
+            {/* <button className="btn-secondary">{t.cta.odontron}</button> */}
           </div>
         </div>
       </section>
@@ -226,7 +215,7 @@ function App() {
       {/* Attention Notice */}
       <section className="notice">
         <div className="container">
-          <h3>{t.notice.title}</h3>
+          <h4>{t.notice.title}</h4>
           <p>{t.notice.description}</p>
         </div>
       </section>
