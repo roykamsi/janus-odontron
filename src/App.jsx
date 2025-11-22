@@ -3,6 +3,7 @@ import { useLanguage } from './LanguageContext.jsx'
 import FlowDiagram from './FlowDiagram.jsx'
 import LazyVideo from './LazyVideo.jsx'
 import VideoLightbox from './VideoLightbox.jsx'
+import FloatingIndustries from './FloatingIndustries.jsx'
 import './App.css'
 
 function App() {
@@ -212,13 +213,11 @@ function App() {
           <h1>{t.industry.title}</h1>
           <h2>{t.industry.subtitle}</h2>
 
-          <div className="applications-image">
-            <img src="/images/Aree-di-Interesse.png" alt={t.industry.title} />
-          </div>
+          <FloatingIndustries language={language} />
         </div>
       </section>
 
-      <div className="section-divider"></div>
+      {/* <div className="section-divider"></div> */}
 
       {/* Call to Action Section */}
       <section className="cta-section">
