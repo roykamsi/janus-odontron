@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLanguage } from './LanguageContext.jsx'
 import FlowDiagram from './FlowDiagram.jsx'
+import LazyVideo from './LazyVideo.jsx'
+import VideoLightbox from './VideoLightbox.jsx'
 import './App.css'
 
 function App() {
   const { language, toggleLanguage, t } = useLanguage()
+  const [isVideoLightboxOpen, setIsVideoLightboxOpen] = useState(false)
 
   return (
     <div className="app">
@@ -109,16 +112,32 @@ function App() {
       </section>
 
       {/* Hadrontherapy Advantages Section */}
-      <section className="hadrontherapy-section">
-        <div className="container">
-          <h2>{t.hadrontherapy.title}</h2>
-          <h1>{t.hadrontherapy.subtitle}</h1>
-
-          <div className="hadrontherapy-image">
-            <video autoPlay={true} src="/videos/The-NHS-Proton-Beam-Therapy-Programme_Gelatina-1.mp4" alt="Janus Odontron Device" />
+      <section className="">
+        <div className="hadrontherapy-section">
+          <LazyVideo
+            src="/videos/The-NHS-Proton-Beam-Therapy-Programme_Gelatina-1.mp4"
+            className="hadrontherapy-video-bg"
+          />
+          <div className="hadrontherapy-overlay"></div>
+          <div className="container-xl hadrontherapy-content">
+            <h2>{t.hadrontherapy.title}</h2>
+            <h1>{t.hadrontherapy.subtitle}</h1>
+            <button
+              className="video-play-button"
+              onClick={() => setIsVideoLightboxOpen(true)}
+              aria-label="Play video with sound"
+            >
+              <span className="play-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </span>
+              {language === 'ITA' ? 'Guarda il video' : 'Watch video'}
+            </button>
           </div>
-
-          <p className="credit">{t.hadrontherapy.credit}</p>
+        </div>
+        <div className="credit-wrapper">
+          <p>{t.hadrontherapy.credit}</p>
         </div>
       </section>
 
@@ -232,6 +251,13 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {/* Video Lightbox */}
+      <VideoLightbox
+        videoSrc="/videos/The-NHS-Proton-Beam-Therapy-Programme_Gelatina-1.mp4"
+        isOpen={isVideoLightboxOpen}
+        onClose={() => setIsVideoLightboxOpen(false)}
+      />
     </div>
   )
 }

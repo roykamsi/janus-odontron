@@ -1,0 +1,155 @@
+.video-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video-lightbox-container {
+  position: relative;
+  width: 80vw;
+  max-width: 1400px;
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10000;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.9;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.lightbox-close:active {
+  transform: scale(0.95);
+}
+
+.lightbox-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Play Button */
+.video-play-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: rgba(0, 191, 165, 0.9);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 191, 165, 0.3);
+}
+
+.video-play-button:hover {
+  background: rgba(0, 191, 165, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(0, 191, 165, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.video-play-button:active {
+  transform: translateY(0);
+}
+
+.play-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-lightbox-container {
+    width: 90vw;
+  }
+
+  .lightbox-close {
+    top: -45px;
+    right: -5px;
+  }
+
+  .video-play-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-lightbox-container {
+    width: 95vw;
+  }
+
+  .lightbox-close {
+    top: -40px;
+  }
+
+  .video-play-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .play-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
