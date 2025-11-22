@@ -5,7 +5,7 @@ export const translations = {
     },
     hero: {
       title: 'Una Terapia Protonica a Fascio per Malattie Tumorali',
-      subtitle: 'Come una stampante 3D, ma a doppia testata.'
+      subtitle: 'Come una stampante 3D,<br>ma a doppia testata.'
     },
     benefits: {
       extends: 'Estende e migliora la vita dei pazienti',
@@ -104,7 +104,7 @@ export const translations = {
     },
     hero: {
       title: 'A Beam Proton Therapy for Tumor Disease',
-      subtitle: 'Like a 3D printer, but double headed.'
+      subtitle: 'Like a 3D printer,<br>but double headed.'
     },
     benefits: {
       extends: 'Extends and improve the life of patients',

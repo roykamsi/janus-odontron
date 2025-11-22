@@ -36,7 +36,7 @@ ol {
 }
 
 .logo img {
-  height: 50px;
+  height: 80px;
   width: auto;
 }
 
@@ -745,7 +745,7 @@ ol {
   }
 
   .logo img {
-    height: 35px;
+    height: 50px;
   }
 
   .header nav {
@@ -774,11 +774,11 @@ ol {
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .hero h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .btn-primary,

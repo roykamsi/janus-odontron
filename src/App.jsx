@@ -15,13 +15,10 @@ function App() {
       <header className="header">
         <div className="container">
           <div className="header-content">
+            <nav>
             <div className="logo">
               <img src="/images/Janus-Logo.png" alt="Janus Odontron" />
             </div>
-            <nav>
-              <a href="mailto:info@janus-odontron.com" className="nav-link">
-                {t.nav.contact}
-              </a>
               <div className="language-selector">
                 <button
                   className={`lang-btn ${language === 'ITA' ? 'active' : ''}`}
@@ -46,7 +43,7 @@ function App() {
       <section className="hero">
         <div className="container">
           <h1>{t.hero.title}</h1>
-          <h2>{t.hero.subtitle}</h2>
+          <h2 dangerouslySetInnerHTML={{ __html: t.hero.subtitle }}></h2>
         </div>
       </section>
 
