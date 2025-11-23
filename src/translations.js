@@ -82,6 +82,11 @@ export const translations = {
       title: 'Probabili Applicazioni Industriali',
       subtitle: 'Le industrie che possono essere coinvolte in questa tecnologia'
     },
+    odontron: {
+      title: 'Odontron',
+      subtitle: 'Il futuro della radioterapia di precisione',
+      description: 'Odontron rappresenta l\'evoluzione della tecnologia protonica per il trattamento dei tumori. Con la sua doppia testata e la precisione millimetrica, offre una soluzione innovativa per la cura dei pazienti.'
+    },
     cta: {
       title: 'Ma c\'è di più.',
       subtitle: 'Per ulteriori informazioni.',
@@ -179,6 +184,11 @@ export const translations = {
     industry: {
       title: 'Probable Industry Applications',
       subtitle: 'The industries that can be involved this technology'
+    },
+    odontron: {
+      title: 'Odontron',
+      subtitle: 'The future of precision radiotherapy',
+      description: 'Odontron represents the evolution of proton technology for tumor treatment. With its double-headed design and millimetric precision, it offers an innovative solution for patient care.'
     },
     cta: {
       title: 'But there\'s more.',

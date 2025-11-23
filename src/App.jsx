@@ -3,12 +3,14 @@ import { useLanguage } from './LanguageContext.jsx'
 import FlowDiagram from './FlowDiagram.jsx'
 import LazyVideo from './LazyVideo.jsx'
 import VideoLightbox from './VideoLightbox.jsx'
+import ImageLightbox from './ImageLightbox.jsx'
 import FloatingIndustries from './FloatingIndustries.jsx'
 import './App.css'
 
 function App() {
   const { language, toggleLanguage, t } = useLanguage()
   const [isVideoLightboxOpen, setIsVideoLightboxOpen] = useState(false)
+  const [isImageLightboxOpen, setIsImageLightboxOpen] = useState(false)
 
   return (
     <div className="app">
@@ -193,7 +195,7 @@ function App() {
 
       {/* Metamaterials Section */}
       <section className="metamaterials">
-        <div className="container">
+        <div className="container-xl">
           <h1>{t.metamaterials.title}</h1>
           <h2>{t.metamaterials.subtitle}</h2>
 
@@ -201,7 +203,7 @@ function App() {
             <img src="/images/Metamateriali-BIANCO.gif" alt={t.metamaterials.title} />
           </div>
 
-          <p>{t.metamaterials.description}</p>
+          <p class="px-20">{t.metamaterials.description}</p>
         </div>
       </section>
 
@@ -212,6 +214,29 @@ function App() {
           <h2>{t.industry.subtitle}</h2>
 
           <FloatingIndustries language={language} />
+        </div>
+      </section>
+
+      {/* Odontron Section */}
+      <section className="odontron-section">
+        <div className="container">
+          <h1>{t.odontron.title}</h1>
+          <h2>{t.odontron.subtitle}</h2>
+
+          <div className="odontron-content">
+            <div
+              className="odontron-image"
+              onClick={() => setIsImageLightboxOpen(true)}
+              role="button"
+              tabIndex={0}
+              aria-label="Open image in lightbox"
+            >
+              <img src="/images/Odontron-Orizz.jpg" alt="Odontron Device" />
+            </div>
+            <div className="odontron-text">
+              <p>{t.odontron.description}</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -259,6 +284,14 @@ function App() {
         videoSrc="/videos/The-NHS-Proton-Beam-Therapy-Programme_Gelatina-1.mp4"
         isOpen={isVideoLightboxOpen}
         onClose={() => setIsVideoLightboxOpen(false)}
+      />
+
+      {/* Image Lightbox */}
+      <ImageLightbox
+        imageSrc="/images/Odontron-Orizz.jpg"
+        imageAlt="Odontron Device"
+        isOpen={isImageLightboxOpen}
+        onClose={() => setIsImageLightboxOpen(false)}
       />
     </div>
   )
