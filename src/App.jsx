@@ -14,29 +14,27 @@ function App() {
     <div className="app">
       {/* Header/Navigation */}
       <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <nav>
+        <div className="container-xl">
+          <nav class="header-content">
             <div className="logo">
               <img src="/images/Janus-Logo.png" alt="Janus Odontron" />
             </div>
-              <div className="language-selector">
-                <button
-                  className={`lang-btn ${language === 'ITA' ? 'active' : ''}`}
-                  onClick={() => toggleLanguage('ITA')}
-                >
-                  ITA
-                </button>
-                <span className="lang-separator">/</span>
-                <button
-                  className={`lang-btn ${language === 'ENG' ? 'active' : ''}`}
-                  onClick={() => toggleLanguage('ENG')}
-                >
-                  ENG
-                </button>
-              </div>
-            </nav>
-          </div>
+            <div className="language-selector">
+              <button
+                className={`lang-btn ${language === 'ITA' ? 'active' : ''}`}
+                onClick={() => toggleLanguage('ITA')}
+              >
+                ITA
+              </button>
+              <span className="lang-separator">/</span>
+              <button
+                className={`lang-btn ${language === 'ENG' ? 'active' : ''}`}
+                onClick={() => toggleLanguage('ENG')}
+              >
+                ENG
+              </button>
+            </div>
+          </nav>
         </div>
       </header>
 
@@ -87,7 +85,7 @@ function App() {
           </div>
 
           <p className="description">
-            {t.prototype.description1}<br/><br/>
+            {t.prototype.description1}<br /><br />
             {t.prototype.description2}
           </p>
         </div>
@@ -135,7 +133,7 @@ function App() {
             >
               <span className="play-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
+                  <path d="M8 5v14l11-7z" />
                 </svg>
               </span>
               {language === 'ITA' ? 'Guarda il video' : 'Watch video'}

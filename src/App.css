@@ -6,6 +6,7 @@ ol {
   width: 100%;
   overflow-x: hidden;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
 .container {
@@ -16,15 +17,16 @@ ol {
 .container-xl {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 /* Header */
 .header {
-  padding: 15px 0;
   background: var(--light-bg);
   border-bottom: 1px solid #e0e0e0;
-  position: sticky;
+  height: var(--header-height);
+  width: 100%;
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
@@ -33,6 +35,13 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  padding: 0 2rem;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: var(--header-height);
+  width: 100%;
 }
 
 .logo img {
@@ -44,6 +53,7 @@ ol {
   display: flex;
   align-items: center;
   gap: 30px;
+  position: sticky;
 }
 
 .nav-link {
@@ -103,6 +113,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: var(--header-height);
 }
 
 .hero .container {
@@ -740,7 +751,6 @@ ol {
 
 @media (max-width: 480px) {
   .header-content {
-    flex-direction: column;
     gap: 15px;
   }
 
